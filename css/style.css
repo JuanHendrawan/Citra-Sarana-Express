@@ -1,0 +1,40 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+.hero-bg {
+  background-image: url("../assets/gudang-material.jpg"); /* Contoh path ke assets */
+  background-size: cover;
+  background-position: center;
+}
+.section {
+  display: none;
+}
+.section.active {
+  display: block;
+}
+.modal-bg,
+.lightbox-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.faq-icon.rotate-180 {
+  transform: rotate(180deg);
+}
+/* Style untuk slider */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+}
+.product-swiper {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+}
+.gallery-swiper .swiper-slide {
+  cursor: pointer;
+}

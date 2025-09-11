@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Perusahaan - Mitra Bangun Sejahtera</title>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Perbaikan untuk footer agar menempel di bawah (Sticky Footer) */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- ===== Header / Navigasi ===== -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-slate-900" id="logo">Mitra<span class="text-blue-600">Bangun</span></a>
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="#tentang" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Tentang Kami</a>
+          <a href="#katalog" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Katalog Produk</a>
+          <a href="#proyek" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Proyek</a>
+          <a
+            href="https://wa.me/628123456780?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda."
+            target="_blank"
+            class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center gap-2"
+          >
+            <i data-lucide="whatsapp" class="h-4 w-4"></i>
+            <span>Kontak</span>
+          </a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <a href="#tentang" class="nav-link block py-2 text-slate-600 hover:text-blue-600">Tentang Kami</a>
+        <a href="#katalog" class="nav-link block py-2 text-slate-600 hover:text-blue-600">Katalog Produk</a>
+        <a href="#proyek" class="nav-link block py-2 text-slate-600 hover:text-blue-600">Proyek</a>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20produk%20Anda." target="_blank" class="block py-2 text-green-600 font-semibold">Hubungi via WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== Bagian Beranda ===== -->
+      <section id="beranda" class="section active">
+        <div class="hero-bg text-white">
+          <div class="bg-black/50 min-h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+              <h1 class="text-4xl md:text-6xl font-bold mb-4">Membangun Masa Depan Anda</h1>
+              <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Penyedia material bangunan terlengkap dan terpercaya untuk segala skala proyek Anda.</p>
+              <a href="#katalog" class="nav-link bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Lihat Katalog Produk</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Bagian Stok Siap Sedia ===== -->
+        <div class="bg-white py-12 md:py-20">
+          <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div class="text-left">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Stok Siap Sedia untuk Semua Skala Proyek</h2>
+                <p class="text-slate-600 mb-4">Mitra Bangun Sejahtera hadir sebagai solusi andal untuk semua skala proyek – dari renovasi rumah hingga konstruksi besar.</p>
+                <p class="text-slate-600 mb-6">
+                  Kami punya stok lengkap yang siap kapan saja, tanpa harus menunggu. Butuh cepat? Silakan ambil langsung di gudang kami. Mau praktis? Kami antar tepat waktu ke lokasi Anda. Dengan layanan cepat dan fleksibel, kami
+                  memastikan proyek Anda berjalan lancar tanpa hambatan.
+                </p>
+                <a
+                  href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20bertanya%20mengenai%20stok%20produk."
+                  target="_blank"
+                  class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                >
+                  <i data-lucide="whatsapp" class="h-5 w-5"></i>
+                  <span>Hubungi Kami</span>
+                </a>
+              </div>
+              <div class="w-full">
+                <div class="swiper gallery-swiper rounded-lg overflow-hidden shadow-xl">
+                  <div class="swiper-wrapper" id="gallery-wrapper">
+                    <!-- Foto galeri akan dimasukkan oleh JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-16 bg-white">
+          <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Mengapa Memilih Kami?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+              <div class="p-6">
+                <i data-lucide="shield-check" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Kualitas Terjamin</h3>
+                <p class="text-slate-600">Kami hanya menyediakan produk-produk berkualitas tinggi yang telah teruji dan bersertifikat SNI.</p>
+              </div>
+              <div class="p-6">
+                <i data-lucide="truck" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Pengiriman Tepat Waktu</h3>
+                <p class="text-slate-600">Armada kami siap mengantarkan pesanan Anda dengan cepat dan aman ke lokasi proyek.</p>
+              </div>
+              <div class="p-6">
+                <i data-lucide="thumbs-up" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Layanan Profesional</h3>
+                <p class="text-slate-600">Tim kami siap membantu Anda dengan konsultasi produk untuk memastikan kebutuhan Anda terpenuhi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Bagian Partner Kami ===== -->
+        <div class="bg-slate-100 py-16">
+          <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Partner Terpercaya Kami</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-12">Kami bekerja sama dengan merek-merek terbaik di industri untuk memastikan kualitas produk yang kami sediakan.</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 gap-y-8">
+              <img src="assets/brand-a.png" alt="Partner Logo 1" class="h-10 md:h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+              <img src="assets/brand-b.png" alt="Partner Logo 2" class="h-10 md:h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+              <img src="assets/brand-c.png" alt="Partner Logo 3" class="h-10 md:h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+              <img src="assets/brand-d.png" alt="Partner Logo 4" class="h-10 md:h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+              <img src="assets/brand-e.png" alt="Partner Logo 5" class="h-10 md:h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Bagian FAQ ===== -->
+        <div class="py-20 bg-white">
+          <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+            <div class="max-w-3xl mx-auto space-y-4" id="faq-container">
+              <!-- FAQ item 1 -->
+              <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-lg hover:bg-slate-50 transition-colors">
+                  <span>Bagaimana cara memesan produk?</span>
+                  <i data-lucide="chevron-down" class="faq-icon transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden p-5 pt-0 text-slate-600">
+                  <p>Anda dapat memesan produk dengan menghubungi tim sales kami melalui telepon/WhatsApp, atau dengan mengisi formulir permintaan penawaran pada halaman detail produk yang Anda inginkan.</p>
+                </div>
+              </div>
+              <!-- FAQ item 2 -->
+              <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-lg hover:bg-slate-50 transition-colors">
+                  <span>Apakah melayani pengiriman ke luar kota?</span>
+                  <i data-lucide="chevron-down" class="faq-icon transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden p-5 pt-0 text-slate-600">
+                  <p>Ya, kami melayani pengiriman ke berbagai kota dengan ketentuan dan syarat yang berlaku. Silakan hubungi tim kami untuk informasi lebih lanjut mengenai jangkauan pengiriman dan biaya yang mungkin timbul.</p>
+                </div>
+              </div>
+              <!-- FAQ item 3 -->
+              <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-lg hover:bg-slate-50 transition-colors">
+                  <span>Apakah ada minimal pembelian?</span>
+                  <i data-lucide="chevron-down" class="faq-icon transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden p-5 pt-0 text-slate-600">
+                  <p>Minimal pembelian bervariasi tergantung pada jenis produk dan lokasi pengiriman. Kami melayani pembelian dalam jumlah besar (grosir) maupun eceran untuk beberapa produk tertentu.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Bagian Tentang Kami ===== -->
+      <section id="tentang" class="section py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold mb-4">Tentang Mitra Bangun Sejahtera</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center mt-12">
+            <div>
+              <h3 class="text-2xl font-bold mb-4">Latar Belakang Perusahaan</h3>
+              <p class="text-slate-600 mb-4 text-justify">
+                Didirikan pada tahun 2005, PT. Mitra Bangun Sejahtera lahir dari visi untuk menjadi solusi satu atap bagi kebutuhan material bangunan di Indonesia. Kami memulai sebagai toko kecil dan berkat kepercayaan pelanggan serta
+                komitmen pada kualitas, kami telah berkembang menjadi salah satu distributor terkemuka di regional.
+              </p>
+              <p class="text-slate-600 text-justify">
+                Kunci sukses kami terletak pada tiga pilar: Kualitas Produk Tanpa Kompromi, Layanan Pelanggan Prima, dan Inovasi Berkelanjutan. Kami selalu memastikan setiap produk yang kami tawarkan telah melalui proses seleksi ketat untuk
+                menjamin performa terbaik bagi proyek Anda.
+              </p>
+            </div>
+            <div class="flex justify-center items-center gap-4">
+              <img src="assets/gudang-1.jpg" alt="Gudang material 1" class="rounded-lg shadow-xl w-1/2" />
+              <img src="assets/proyek-2.jpg" alt="Gudang material 2" class="rounded-lg shadow-xl w-1/2 mt-8" />
+            </div>
+          </div>
+
+          <div class="bg-slate-100 rounded-lg p-8 md:p-12 mt-16">
+            <div class="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
+                <p class="text-slate-600">Menjadi perusahaan penyedia material bangunan yang paling inovatif, terpercaya, dan berorientasi pada keberlanjutan di Asia Tenggara.</p>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold mb-4">Misi Kami</h3>
+                <ul class="list-disc list-inside text-slate-600 space-y-2">
+                  <li>Menyediakan produk berkualitas superior dengan harga kompetitif.</li>
+                  <li>Memberikan pengalaman pelanggan yang luar biasa melalui layanan ahli.</li>
+                  <li>Membangun kemitraan jangka panjang yang saling menguntungkan.</li>
+                  <li>Berkontribusi pada pembangunan nasional yang berkelanjutan.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-20">
+            <h3 class="text-3xl font-bold text-center mb-12">Lokasi & Kontak</h3>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <i data-lucide="map-pin" class="h-8 w-8 text-blue-600 mt-1 flex-shrink-0"></i>
+                  <div>
+                    <h4 class="font-semibold text-lg">Alamat Kantor</h4>
+                    <p class="text-slate-600">Jl. Pembangunan No. 123, Jakarta Pusat, Indonesia</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <i data-lucide="phone" class="h-8 w-8 text-blue-600 mt-1 flex-shrink-0"></i>
+                  <div>
+                    <h4 class="font-semibold text-lg">Telepon / WhatsApp</h4>
+                    <p class="text-slate-600">+62 812-3456-7890</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <i data-lucide="mail" class="h-8 w-8 text-blue-600 mt-1 flex-shrink-0"></i>
+                  <div>
+                    <h4 class="font-semibold text-lg">Email</h4>
+                    <p class="text-slate-600">sales@mitrabangun.com</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15866.67397942158!2d106.82083841926456!3d-6.175392395563636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1675861424172!5m2!1sid!2sid"
+                  width="100%"
+                  height="350"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="rounded-lg shadow-lg"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Bagian Katalog Produk ===== -->
+      <section id="katalog" class="section py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-4">Katalog Produk Kami</h2>
+          <p class="text-center text-slate-600 max-w-2xl mx-auto mb-10">Temukan semua yang Anda butuhkan untuk proyek Anda. Gunakan pencarian atau filter untuk menemukan produk dengan lebih mudah.</p>
+
+          <!-- Kontrol Pencarian dan Filter -->
+          <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <input type="text" id="search-input" placeholder="Cari produk..." class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+            <select id="category-filter" class="p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option value="semua">Semua Kategori</option>
+            </select>
+          </div>
+
+          <!-- Grid Produk -->
+          <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Produk akan dimasukkan oleh JavaScript di sini -->
+          </div>
+          <div id="no-results" class="text-center py-16 hidden">
+            <i data-lucide="search-x" class="mx-auto h-16 w-16 text-slate-400 mb-4"></i>
+            <h3 class="text-xl font-semibold text-slate-700">Produk tidak ditemukan</h3>
+            <p class="text-slate-500">Coba gunakan kata kunci atau filter yang berbeda.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Bagian Proyek ===== -->
+      <section id="proyek" class="section py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">Proyek Referensi Kami</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="rounded-lg overflow-hidden shadow-lg group">
+              <img src="assets/proyek-perumahan.jpg" alt="Proyek 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="p-6 bg-white">
+                <h3 class="text-xl font-semibold mb-2">Perumahan Griya Asri</h3>
+                <p class="text-slate-600">Penyediaan material struktur dan atap untuk 150 unit rumah.</p>
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-lg group">
+              <img src="assets/proyek-komersial.jpg" alt="Proyek 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="p-6 bg-white">
+                <h3 class="text-xl font-semibold mb-2">Ruko Bisnis Center</h3>
+                <p class="text-slate-600">Pemasok utama untuk kebutuhan baja ringan dan material finishing.</p>
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-lg group">
+              <img src="assets/proyek-pemerintah.jpg" alt="Proyek 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="p-6 bg-white">
+                <h3 class="text-xl font-semibold mb-2">Renovasi Gedung Sekolah</h3>
+                <p class="text-slate-600">Menyediakan cat, keramik, dan material sanitasi berkualitas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-slate-900 text-white">
+      <div class="container mx-auto px-6 py-8 text-center">
+        <p>&copy; 2024 Mitra Bangun Sejahtera. Semua Hak Cipta Dilindungi.</p>
+      </div>
+    </footer>
+
+    <!-- ===== Modal Detail Produk ===== -->
+    <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-bg hidden">
+      <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
+        <button id="close-modal" class="absolute top-4 right-4 text-slate-500 hover:text-slate-800 z-20">
+          <i data-lucide="x" class="h-8 w-8"></i>
+        </button>
+        <div class="grid md:grid-cols-2">
+          <!-- Bagian Kiri: Slider Foto -->
+          <div class="w-full h-full bg-slate-100">
+            <div class="swiper product-swiper w-full h-full">
+              <div class="swiper-wrapper" id="modal-images-wrapper">
+                <!-- Gambar akan dimasukkan oleh JavaScript -->
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+          <!-- Bagian Kanan: Info Produk -->
+          <div class="p-8 overflow-y-auto">
+            <span id="modal-category" class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full"></span>
+            <h2 id="modal-title" class="text-3xl font-bold mt-2 mb-4"></h2>
+            <p id="modal-description" class="text-slate-600 mb-6"></p>
+            <h3 class="text-xl font-semibold mb-3">Spesifikasi Teknis</h3>
+            <table id="modal-specs" class="w-full text-left text-sm">
+              <!-- Spesifikasi akan diisi oleh JavaScript -->
+            </table>
+            <a
+              href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20produk%20ini"
+              target="_blank"
+              id="modal-wa-button"
+              class="mt-8 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+            >
+              <i data-lucide="whatsapp"></i>
+              Tanya via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Lightbox untuk Galeri Foto ===== -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 lightbox-bg hidden">
+      <img id="lightbox-img" src="" alt="Preview Gambar" class="max-w-[90%] max-h-[90%] object-contain rounded-lg" />
+      <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-slate-300">
+        <i data-lucide="x" class="h-10 w-10"></i>
+      </button>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
